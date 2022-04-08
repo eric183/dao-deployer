@@ -1,6 +1,6 @@
 import '../styles/globals.css';
 // import '@dao42/d42paas-front/style.css';
-import '../../client/dist/style.css';
+import '../../dist/style.css';
 
 import { Client } from '@notionhq/client';
 import { ListBlockChildrenResponse } from '@notionhq/client/build/src/api-endpoints';
