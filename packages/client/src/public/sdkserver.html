@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DaoPaaS</title>
+    <style>
+        main {
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .edit-container {
+            height: 100%;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/devicon/2.14.0/devicon.min.css" crossorigin="anonymous" />
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link rel="stylesheet" href="../../dist/style.css" crossorigin="anonymous" />
+
+</head>
+<body>
+    <main>
+        <div class="edit-container"></div>
+    </main>
+    <!-- <script src="/dist/daoPaaS.js"></script> -->
+    <script type="module" src="../../dist/DaoPaaS.umd.js"></script>
+
+    <script>
+      window.onload = () => {
+        window.daopaas = DaoPaaS;
+        var qs = new URLSearchParams(document.location.search.substring(1));
+        const env = qs.get('env');
+        const ticket = qs.get('ticket');
+        const playgroundId = qs.get('playgroundId');
+        const paasDomain = qs.get('paasDomain');
+
+        window.daopaas = new DaoPaaS.DaoPaaS({
+          ticket: 'MXwzNjg1ODM1NDI5MzYwNDM1MjB8MXx8MTY3NzUwMjIzNDAwMA==',
+          playgroundId: '368583542936043520',
+          tenantId: "1",
+          userId: qs.get('userId'),
+          username: qs.get('username'),
+          serviceWorkerOrigin: 'https://develop.1024paas.com',
+          paasDomain: paasDomain? paasDomain : 'develop.1024paas.com',
+          // components: [{
+          //   item: 'Editor',
+          //   container: document.querySelector('.edit-container'),
+          //   props: {
+          //     className: 'hi'
+          //   }
+          // }]
+          // http://127.0.0.1:5501/packages/client/src/public/sdkserver.html?userId=23&username=kk
+        });
+
+        daopaas.Editor({
+          container: '.edit-container',
+          className: 'edit-container-sampler',
+        });
+
+        // daopaas.Page({
+        //     container: document.querySelector('.edit-container'),
+        //         // props: {
+        //         //     playgroundId: search,
+        //         // }
+        //     }
+        // )
+      }
+    </script>
+</body>
+</html>
+
+
+<!-- debug: false
+ioPath: "wss://develop.1024paas.com"
+paasDomain: "develop.1024paas.com"
+playgroundId: "368583542936043520"
+tenantId: "1"
+ticket: "MXwzNjg1ODM1NDI5MzYwNDM1MjB8MXx8MTY3NzUwMjIzNDAwMA=="
+userId: "1"
+username: "guest"
+uuid: "1" -->

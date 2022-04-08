@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DaoPaaS</title>
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/devicon/2.14.0/devicon.min.css" crossorigin="anonymous" />
+</head>
+<body>
+    <main>
+        <div class="edit-container"></div>
+    </main>
+    <script>
+      window.onload = () => {
+        var qs = new URLSearchParams(document.location.search.substring(1));
+        window.daopaas = new DaoPaaS({
+          ticket: qs.get('ticket'),
+          playgroundId: qs.get('playgroundId'),
+          userId: qs.get('userId'),
+          tenantId: qs.get('tenantId'),
+          username: qs.get('username')
+        });
+        daopaas.Page({
+            container: document.querySelector('main'),
+                // props: {
+                //     playgroundId: search,
+                // }
+            }
+        )
+      }
+    </script>
+</body>
+</html>

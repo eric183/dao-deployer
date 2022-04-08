@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DaoPaaS</title>
+    <style>
+        main {
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .edit-container {
+            height: 100%;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/devicon/2.14.0/devicon.min.css" crossorigin="anonymous" />
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link rel="stylesheet" href="./style.css" crossorigin="anonymous" />
+
+</head>
+<body>
+    <main>
+        <div class="edit-container"></div>
+    </main>
+    <!-- <script src="/dist/daoPaaS.js"></script> -->
+    <script type="module" src="./DaoPaaS.umd.js"></script>
+
+    <script>
+      window.onload = () => {
+        window.daopaas = DaoPaaS;
+        var qs = new URLSearchParams(document.location.search.substring(1));
+        const env = qs.get('env');
+        const ticket = qs.get('ticket');
+        const playgroundId = qs.get('playgroundId');
+        const paasDomain = qs.get('paasDomain');
+
+        window.daopaas = new DaoPaaS.DaoPaaS({
+          ticket,
+          playgroundId,
+          userId: qs.get('userId'),
+          tenantId: qs.get('tenantId'),
+          username: qs.get('username'),
+          serviceWorkerOrigin: 'https://develop.1024paas.com',
+          paasDomain: paasDomain? paasDomain : 'develop.1024paas.com',
+          onError: (error) => { console.log(error) },
+          onMessage: (message) => { console.log(message) },
+          // playgroundId: qs.get('playgroundId'),
+          // playgroundId: qs.get('playgroundId'),
+          // tenantId: qs.get('tenantId'),
+          
+        });
+        daopaas.Page({
+            container: document.querySelector('.edit-container'),
+                // props: {
+                //     playgroundId: search,
+                // }
+            }
+        )
+      }
+    </script>
+</body>
+</html>

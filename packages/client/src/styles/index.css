@@ -1,0 +1,67 @@
+@import 'xterm/css/xterm.css';
+@import 'react-complex-tree/lib/style.css';
+
+@import "./collections/rsuit.scss";
+@import "./collections/utility.scss";
+@import "./collections/iconfont.scss";
+@import "./collections/tabs-costumers.scss";
+@import "./collections/tree-costumers.scss";
+@import "./collections/xterm-costumers.scss";
+
+
+@import "./collections/tailwind.scss";
+@import "./collections/editor-layer.scss";
+@import "./collections/fonts.scss";
+
+@import url('https://fonts.googleapis.com/css?family=Material+Icons&display=block');
+
+@layer base {
+
+  .container-layout-content {
+    height: calc(100% - 4.625rem);
+
+    .Pane1 {
+      /* @apply overflow-hidden rounded-sm mx-3.5 w-3/6	flex flex-row; */
+    }
+    section {
+      height: calc(100% - 0.625rem);
+    }
+  }
+
+}
+
+.font-gray {
+  color: #CCC;
+  font-size: 12.5px;
+}
+
+.tree-bg {
+  background: #191919;
+}
+
+.init-class {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  /* height: 500px; */
+  width: 100%;
+}
+
+.tl-storyslider {
+  display: none;
+}
+
+.rs-loader {
+  background: rgb(30 31 30 / 66%);
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}

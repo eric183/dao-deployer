@@ -1,0 +1,10 @@
+.nested-sample {
+    p {
+        color: red;
+    }
+}
+.avatar-hover:hover {
+    z-index: 10;
+    transform: scale(1.2);
+    transition: all 0.5s ease;
+}

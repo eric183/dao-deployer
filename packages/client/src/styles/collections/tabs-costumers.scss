@@ -1,0 +1,43 @@
+.rs-nav.rs-nav-tabs.rs-nav-horizontal {
+  border: none;
+  .rs-nav-item {
+    border: none;
+    &.rs-nav-item-active {
+      border: 0;
+      border-radius: 0;
+      border-bottom-width: 1px;
+      background-color: #1e1e1e;
+      color: #eaeaea;
+    }
+    &:hover, &:focus {
+      border-radius: 0;
+      background-color: #1a1a1a;
+    }
+  }
+  .rs-nav-bar {
+    border: none;
+  }
+}
+
+.rs-nav-subtle.rs-nav-horizontal .rs-nav-bar {
+  border: none;
+}
+
+.rs-nav-subtle .rs-nav-item:focus {
+  color: #E9F3F0;
+}
+
+.rs-nav-subtle .rs-nav-item:hover {
+  color: #E9F3F0
+}
+
+.rs-nav-item.rs-nav-item-active {
+  color: #E9F3F0;
+}
+
+.rs-nav-subtle .rs-nav-item.rs-nav-item-active:before {
+  background-color: #E9F3F0;
+  width: 24px;
+  left: 50% !important;
+  transform: translate(-12px);
+}
