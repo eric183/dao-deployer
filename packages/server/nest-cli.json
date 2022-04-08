@@ -1,0 +1,65 @@
+{
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/entry/src",
+  "compilerOptions": {
+    "tsConfigPath": "apps/entry/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/entry",
+  "projects": {
+    "app": {
+      "type": "application",
+      "root": "apps/entry",
+      "entryFile": "main",
+      "sourceRoot": "apps/entry/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/entry/tsconfig.app.json"
+      }
+    },
+    "redis-source": {
+      "type": "application",
+      "root": "apps/redis-source",
+      "entryFile": "main",
+      "sourceRoot": "apps/redis-source/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/redis-source/tsconfig.app.json"
+      }
+    },
+    "rabbitmq": {
+      "type": "application",
+      "root": "apps/rabbitmq",
+      "entryFile": "main",
+      "sourceRoot": "apps/rabbitmq/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/rabbitmq/tsconfig.app.json"
+      }
+    },
+    "auth": {
+      "type": "application",
+      "root": "apps/auth",
+      "entryFile": "main",
+      "sourceRoot": "apps/auth/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/auth/tsconfig.app.json"
+      }
+    },
+    "lsp": {
+      "type": "application",
+      "root": "apps/lsp",
+      "entryFile": "main",
+      "sourceRoot": "apps/lsp/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/lsp/tsconfig.app.json"
+      }
+    },
+    "mongodb": {
+      "type": "application",
+      "root": "apps/mongodb",
+      "entryFile": "main",
+      "sourceRoot": "apps/mongodb/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/mongodb/tsconfig.app.json"
+      }
+    }
+  }
+}
