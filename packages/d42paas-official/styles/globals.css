@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer components {
+  #__next {
+      @apply h-full w-full;
+  }
+  html,
+  body {
+      @apply h-full w-full;
+      font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+      Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+      overflow:hidden;
+      padding: 0;
+      margin: 0;
+  }
+}
+
+:root {
+  --theme-bg-color: rgba(16 18 27 / 40%);
+}
+
+@font-face {
+  font-family: 'd42';  /* Project id 2833282 */
+  src: url('//at.alicdn.com/t/font_2833282_5ly6inpcvjl.woff2?t=1649234553969') format('woff2'),
+       url('//at.alicdn.com/t/font_2833282_5ly6inpcvjl.woff?t=1649234553969') format('woff'),
+       url('//at.alicdn.com/t/font_2833282_5ly6inpcvjl.ttf?t=1649234553969') format('truetype');
+}
