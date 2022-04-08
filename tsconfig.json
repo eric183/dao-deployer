@@ -1,22 +1,44 @@
 {
   "compilerOptions": {
-    "forceConsistentCasingInFileNames": true,
-    "strict": true,
+
     "outDir": "./ts/dist",
     "rootDir": ".",
     "baseUrl": ".",
     "typeRoots": [
       "node_modules/@types"
-    ]
-   
+    ],
+    "target": "es5",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noImplicitAny": false,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+
   },
   "include": [
     "config/*",
-    "packages",
-    "packages/**/*.d.ts",
     "scripts/**/*",
     ".eslintrc.js",
-    "jest.config.ts"
+    "jest.config.ts", 
+    "types", 
+    "pages", 
+    "lib", 
+    "__tests__", 
+    "components", 
+    "next-env.d.ts"  
   ],
   "exclude": ["node_modules", "dist/**/*", "doc/**/*"]
 }
