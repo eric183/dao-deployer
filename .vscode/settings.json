@@ -1,0 +1,8 @@
+{
+    "typescript.tsdk": "node_modules/typescript/lib",
+    "typescript.autoClosingTags": true,
+    "typescript.suggest.autoImports": true,
+    "liveServer.settings.port": 5501,
+    "eslint.alwaysShowStatus": true,
+    "debug.javascript.unmapMissingSources": true
+}

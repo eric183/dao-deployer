@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "outDir": "./ts/dist",
+    "rootDir": ".",
+    "baseUrl": ".",
+    "typeRoots": [
+      "node_modules/@types"
+    ]
+   
+  },
+  "include": [
+    "config/*",
+    "packages",
+    "packages/**/*.d.ts",
+    "scripts/**/*",
+    ".eslintrc.js",
+    "jest.config.ts"
+  ],
+  "exclude": ["node_modules", "dist/**/*", "doc/**/*"]
+}
