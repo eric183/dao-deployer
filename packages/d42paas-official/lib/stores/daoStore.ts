@@ -1,4 +1,6 @@
-import { DaoPaaS } from '../../../client/dist/DaoPaaS';
+// import { DaoPaaS } from '../../../client/dist/DaoPaaS';
+import { DaoPaaS } from '../../dist/DaoPaaS';
+
 import create from 'zustand';
 
 export const daoStore = create<{
