@@ -20,8 +20,9 @@ import {
 import React, { FC, useEffect, useState } from 'react';
 // import IDE from '~/components/IDE';
 import { request } from '../../lib/utils/request';
-import { PageLoading } from '~/packages/d42paas-official/components/PageLoading';
-import { loadingStore } from '~/packages/d42paas-official/lib/stores/loadingStore';
+import { loadingStore } from '../../lib/stores/loadingStore';
+import { PageLoading } from '../../components/PageLoading';
+
 
 const DashBoardSlugLayout = styled(motion.div)`
   header {

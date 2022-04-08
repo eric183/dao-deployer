@@ -97,16 +97,16 @@ const EditorSlug = (props: any) => {
 
     const tenantId = '3';
     // const username = qs.get('username') ? qs.get('username')! : 'kuangkuang';
-    // const DaoPaaS = await paasImporter();
-    // const dao = new DaoPaaS({
-    //   // debug: true,
-    //   tenantId,
-    //   playgroundId,
-    //   ticket,
-    // });
-    // createDao(dao);
+    const DaoPaaS = await paasImporter();
+    const dao = new DaoPaaS({
+      // debug: true,
+      tenantId,
+      playgroundId,
+      ticket,
+    });
+    createDao(dao);
 
-    // dao.activePlayground();
+    dao.activePlayground();
   };
 
   useEffect(() => {

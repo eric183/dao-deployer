@@ -1,6 +1,5 @@
 import '../styles/globals.css';
-// import '@dao42/d42paas-front/style.css';
-import '../dist/style.css';
+import '@dao42/d42paas-front/style.css';
 
 import { Client } from '@notionhq/client';
 import { ListBlockChildrenResponse } from '@notionhq/client/build/src/api-endpoints';
@@ -17,8 +16,8 @@ import { LoginModal } from '../components/LoginModal';
 import { modalStore } from '../lib/stores/modelStore';
 import { useRouter } from 'next/router';
 import { checkToken } from '../lib/utils/checkToken';
-import { PageLoading } from '~/packages/d42paas-official/components/PageLoading';
-import { loadingStore } from '~/packages/d42paas-official/lib/stores/loadingStore';
+import { loadingStore } from '../lib/stores/loadingStore';
+import { PageLoading } from '../components/PageLoading';
 
 // import { getTicket } from '../lib/utils/request';
 

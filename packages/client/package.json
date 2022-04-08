@@ -1,6 +1,6 @@
 {
   "name": "@dao42/d42paas-front",
-  "version": "0.7.62",
+  "version": "0.7.63",
   "description": "> TODO: description",
   "author": "eric183 <kk297466058@gmail.com>",
   "homepage": "https://github.com/dao42/d42paas_frontend#readme",
@@ -43,7 +43,6 @@
     "clean": "node config/patchClean.js",
     "workNameSpaceToFix": "node ./config/workNameSpaceToFix.js",
     "tsc": "tsc -p ./tsconfig.json --isolatedModules false"
-
   },
   "dependencies": {
     "@dao42/d42paas_rtc": "^0.1.8"

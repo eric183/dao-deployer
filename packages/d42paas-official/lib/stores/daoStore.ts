@@ -1,5 +1,5 @@
 // import { DaoPaaS } from '../../../client/dist/DaoPaaS';
-import { DaoPaaS } from '../../dist/DaoPaaS';
+import { DaoPaaS } from '@dao42/d42paas-front';
 
 import create from 'zustand';
 

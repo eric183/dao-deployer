@@ -1,12 +1,12 @@
 /* eslint-disable */
 // @ts-nocheck
 
-import { DaoPaaS } from '../../dist/DaoPaaS';
+import { DaoPaaS } from '@dao42/d42paas-front';
 import { noSSR } from 'next/dynamic';
 
 export const paasImporter = async () => {
   return (await noSSR(
-    (async () => (await import('../../dist/DaoPaaS.es.js')).DaoPaaS) as any,
+    (async () => (await import('@dao42/d42paas-front')).DaoPaaS) as any,
     {
       ssr: false,
     },
