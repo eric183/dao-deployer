@@ -53,7 +53,7 @@ const PAAS_ORIGIN = process.env.NEXT_PUBLIC_API_ORIGIN;
 const API_PORT = '8001';
 
 export const request = async (url: string, method?: string, body?: any) => {
-  return await fetch(`${protocol}://${PAAS_ORIGIN}:${API_PORT}${url}`, {
+  return await fetch(`${protocol}://${PAAS_ORIGIN}${url}`, {
     mode: 'cors',
     method: method ? method : 'GET',
     headers: {
