@@ -45,7 +45,7 @@ const getTicket = async () => {
   // return postByJson("/sdk/codeZones/fork", param);
 };
 
-const protocol = 'http';
+const protocol = 'https';
 
 // const PAAS_ORIGIN = window.location.origin;
 const PAAS_ORIGIN = process.env.NEXT_PUBLIC_API_ORIGIN;
